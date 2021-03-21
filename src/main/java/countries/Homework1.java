@@ -27,8 +27,8 @@ public class Homework1 {
     public Optional<String> streamPipeline2() {
         return countries.stream()
                 .filter(country -> country.getName().toLowerCase().contains("island"))
-                .map(Country::getName)
-                .findFirst();
+                .findFirst()
+                .map(country -> country.getName());
     }
 
     /**
